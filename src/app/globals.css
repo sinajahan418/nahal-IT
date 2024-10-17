@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #f0f0f0;
   --foreground: #171717;
 }
 
@@ -12,6 +12,12 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+.costomer {
+  text-decoration: underline;
+}
+.rtl {
+  direction: rtl;
 }
 
 body {
