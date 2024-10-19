@@ -2,14 +2,18 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import img from "./img/photo_2024-10-18_00-37-44.jpg";
 
 const Banner = () => {
+  console.log(img);
+
   return (
-    <div className="m-8 rounded-lg shadow-xl">
+    <div className="m-2 h-[200px] sm:h-[300px] md:h-[500px]  md:m-8 sm:m-4 p-4">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -17,30 +21,36 @@ const Banner = () => {
         pagination={{
           clickable: true,
         }}
-        autoplay={{ delay: 1500 }}
+        autoplay={{ delay: 2000 }}
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
-          <img
+          <Image
+            width={300}
+            height={300}
             className=" rounded-lg shadow-lg"
-            src="https://set-coffee.com/wp-content/uploads/2023/12/slide.jpg"
+            src="/_next/static/media/photo_2024-10-18_00-37-32.272aec7f.jpg"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
-          <img
+          <Image
+            width={300}
+            height={300}
             className=" rounded-lg shadow-lg"
-            src="https://set-coffee.com/wp-content/uploads/2021/10/winter-slie.jpg"
-            alt="Slide"
+            src="/_next/static/media/photo_2024-10-18_00-37-38.d8417ec7.jpg"
+            alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
-          <img
+          <Image
+            width={300}
+            height={300}
             className=" rounded-lg shadow-lg"
-            src="https://set-coffee.com/wp-content/uploads/2022/06/fall.jpg"
-            alt="Slide"
+            src="/_next/static/media/photo_2024-10-18_00-37-44.9638d0f2.jpg"
+            alt=""
           />
         </SwiperSlide>
       </Swiper>
